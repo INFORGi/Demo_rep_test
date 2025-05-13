@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5fa0001668f24447a0fa2a4c65586857" Name="Diagram1">
+        <EntityTypeShape EntityType="demo_treModel.Material_type" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="demo_treModel.Product_type" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="demo_treModel.Product_workshops" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="demo_treModel.Products" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="demo_treModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="demo_treModel.Type_workshop" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="demo_treModel.Workshops" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
+        <AssociationConnector Association="demo_treModel.FK_Products_Material_type" ManuallyRouted="false" />
+        <AssociationConnector Association="demo_treModel.FK_Products_Product_type" ManuallyRouted="false" />
+        <AssociationConnector Association="demo_treModel.FK_Product_workshops_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="demo_treModel.FK_Product_workshops_Workshops" ManuallyRouted="false" />
+        <AssociationConnector Association="demo_treModel.FK_Workshops_Type_workshop" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\shulg\\OneDrive\\Desktop\\\u0414\u0435\u043C\u043E\u043D\u0441\u0442\u0440\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439 \u044D\u043A\u0437\u0430\u043C\u0435\u043D\\\u0417\u0430\u0434\u0430\u043D\u0438\u0435 - \u0440\u0435\u043F\u0435\u0442\u0438\u0446\u0438\u044F 13.05.25\\poject_md\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CB5640BD-DB21-4429-A15E-4B534D896D5C}|poject_md.csproj|c:\\users\\shulg\\onedrive\\desktop\\\u0434\u0435\u043C\u043E\u043D\u0441\u0442\u0440\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439 \u044D\u043A\u0437\u0430\u043C\u0435\u043D\\\u0437\u0430\u0434\u0430\u043D\u0438\u0435 - \u0440\u0435\u043F\u0435\u0442\u0438\u0446\u0438\u044F 13.05.25\\poject_md\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB5640BD-DB21-4429-A15E-4B534D896D5C}|poject_md.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB5640BD-DB21-4429-A15E-4B534D896D5C}|poject_md.csproj|c:\\users\\shulg\\onedrive\\desktop\\\u0434\u0435\u043C\u043E\u043D\u0441\u0442\u0440\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439 \u044D\u043A\u0437\u0430\u043C\u0435\u043D\\\u0437\u0430\u0434\u0430\u043D\u0438\u0435 - \u0440\u0435\u043F\u0435\u0442\u0438\u0446\u0438\u044F 13.05.25\\poject_md\\card.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB5640BD-DB21-4429-A15E-4B534D896D5C}|poject_md.csproj|solutionrelative:card.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB5640BD-DB21-4429-A15E-4B534D896D5C}|poject_md.csproj|c:\\users\\shulg\\onedrive\\desktop\\\u0434\u0435\u043C\u043E\u043D\u0441\u0442\u0440\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439 \u044D\u043A\u0437\u0430\u043C\u0435\u043D\\\u0437\u0430\u0434\u0430\u043D\u0438\u0435 - \u0440\u0435\u043F\u0435\u0442\u0438\u0446\u0438\u044F 13.05.25\\poject_md\\workshops.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB5640BD-DB21-4429-A15E-4B534D896D5C}|poject_md.csproj|solutionrelative:workshops.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB5640BD-DB21-4429-A15E-4B534D896D5C}|poject_md.csproj|c:\\users\\shulg\\onedrive\\desktop\\\u0434\u0435\u043C\u043E\u043D\u0441\u0442\u0440\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439 \u044D\u043A\u0437\u0430\u043C\u0435\u043D\\\u0437\u0430\u0434\u0430\u043D\u0438\u0435 - \u0440\u0435\u043F\u0435\u0442\u0438\u0446\u0438\u044F 13.05.25\\poject_md\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB5640BD-DB21-4429-A15E-4B534D896D5C}|poject_md.csproj|solutionrelative:products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB5640BD-DB21-4429-A15E-4B534D896D5C}|poject_md.csproj|c:\\users\\shulg\\onedrive\\desktop\\\u0434\u0435\u043C\u043E\u043D\u0441\u0442\u0440\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439 \u044D\u043A\u0437\u0430\u043C\u0435\u043D\\\u0437\u0430\u0434\u0430\u043D\u0438\u0435 - \u0440\u0435\u043F\u0435\u0442\u0438\u0446\u0438\u044F 13.05.25\\poject_md\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CB5640BD-DB21-4429-A15E-4B534D896D5C}|poject_md.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 269,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Workshops.cs",
+              "DocumentMoniker": "C:\\Users\\shulg\\OneDrive\\Desktop\\\u0414\u0435\u043C\u043E\u043D\u0441\u0442\u0440\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439 \u044D\u043A\u0437\u0430\u043C\u0435\u043D\\\u0417\u0430\u0434\u0430\u043D\u0438\u0435 - \u0440\u0435\u043F\u0435\u0442\u0438\u0446\u0438\u044F 13.05.25\\poject_md\\Workshops.cs",
+              "RelativeDocumentMoniker": "Workshops.cs",
+              "ToolTip": "C:\\Users\\shulg\\OneDrive\\Desktop\\\u0414\u0435\u043C\u043E\u043D\u0441\u0442\u0440\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439 \u044D\u043A\u0437\u0430\u043C\u0435\u043D\\\u0417\u0430\u0434\u0430\u043D\u0438\u0435 - \u0440\u0435\u043F\u0435\u0442\u0438\u0446\u0438\u044F 13.05.25\\poject_md\\Workshops.cs",
+              "RelativeToolTip": "Workshops.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T11:29:47.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Products.cs",
+              "DocumentMoniker": "C:\\Users\\shulg\\OneDrive\\Desktop\\\u0414\u0435\u043C\u043E\u043D\u0441\u0442\u0440\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439 \u044D\u043A\u0437\u0430\u043C\u0435\u043D\\\u0417\u0430\u0434\u0430\u043D\u0438\u0435 - \u0440\u0435\u043F\u0435\u0442\u0438\u0446\u0438\u044F 13.05.25\\poject_md\\Products.cs",
+              "RelativeDocumentMoniker": "Products.cs",
+              "ToolTip": "C:\\Users\\shulg\\OneDrive\\Desktop\\\u0414\u0435\u043C\u043E\u043D\u0441\u0442\u0440\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439 \u044D\u043A\u0437\u0430\u043C\u0435\u043D\\\u0417\u0430\u0434\u0430\u043D\u0438\u0435 - \u0440\u0435\u043F\u0435\u0442\u0438\u0446\u0438\u044F 13.05.25\\poject_md\\Products.cs",
+              "RelativeToolTip": "Products.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T11:28:59.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\shulg\\OneDrive\\Desktop\\\u0414\u0435\u043C\u043E\u043D\u0441\u0442\u0440\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439 \u044D\u043A\u0437\u0430\u043C\u0435\u043D\\\u0417\u0430\u0434\u0430\u043D\u0438\u0435 - \u0440\u0435\u043F\u0435\u0442\u0438\u0446\u0438\u044F 13.05.25\\poject_md\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\shulg\\OneDrive\\Desktop\\\u0414\u0435\u043C\u043E\u043D\u0441\u0442\u0440\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439 \u044D\u043A\u0437\u0430\u043C\u0435\u043D\\\u0417\u0430\u0434\u0430\u043D\u0438\u0435 - \u0440\u0435\u043F\u0435\u0442\u0438\u0446\u0438\u044F 13.05.25\\poject_md\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAADgv1sAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T11:25:30.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Card.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\shulg\\OneDrive\\Desktop\\\u0414\u0435\u043C\u043E\u043D\u0441\u0442\u0440\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439 \u044D\u043A\u0437\u0430\u043C\u0435\u043D\\\u0417\u0430\u0434\u0430\u043D\u0438\u0435 - \u0440\u0435\u043F\u0435\u0442\u0438\u0446\u0438\u044F 13.05.25\\poject_md\\Card.xaml.cs",
+              "RelativeDocumentMoniker": "Card.xaml.cs",
+              "ToolTip": "C:\\Users\\shulg\\OneDrive\\Desktop\\\u0414\u0435\u043C\u043E\u043D\u0441\u0442\u0440\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439 \u044D\u043A\u0437\u0430\u043C\u0435\u043D\\\u0417\u0430\u0434\u0430\u043D\u0438\u0435 - \u0440\u0435\u043F\u0435\u0442\u0438\u0446\u0438\u044F 13.05.25\\poject_md\\Card.xaml.cs",
+              "RelativeToolTip": "Card.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAuwCMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T11:27:49.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\shulg\\OneDrive\\Desktop\\\u0414\u0435\u043C\u043E\u043D\u0441\u0442\u0440\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439 \u044D\u043A\u0437\u0430\u043C\u0435\u043D\\\u0417\u0430\u0434\u0430\u043D\u0438\u0435 - \u0440\u0435\u043F\u0435\u0442\u0438\u0446\u0438\u044F 13.05.25\\poject_md\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\shulg\\OneDrive\\Desktop\\\u0414\u0435\u043C\u043E\u043D\u0441\u0442\u0440\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439 \u044D\u043A\u0437\u0430\u043C\u0435\u043D\\\u0417\u0430\u0434\u0430\u043D\u0438\u0435 - \u0440\u0435\u043F\u0435\u0442\u0438\u0446\u0438\u044F 13.05.25\\poject_md\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-13T11:24:26.645Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

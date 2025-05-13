@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="demo_treModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Material_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_material_type" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="procient" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Products_Material_type" FromRole="Material_type" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="Product_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_product_type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="cooficient_product" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Products_Product_type" FromRole="Product_type" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="Product_workshops">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_product" Type="Int32" Nullable="false" />
+    <Property Name="id_workshop" Type="Int32" Nullable="false" />
+    <Property Name="time_m_" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Product_workshops_Products" FromRole="Product_workshops" ToRole="Products" />
+    <NavigationProperty Name="Workshops" Relationship="Self.FK_Product_workshops_Workshops" FromRole="Product_workshops" ToRole="Workshops" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="type_products_id" Type="Int32" Nullable="false" />
+    <Property Name="name_product" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="articul" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="min_cost_seller" Type="Double" Nullable="false" />
+    <Property Name="base_material_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Material_type" Relationship="Self.FK_Products_Material_type" FromRole="Products" ToRole="Material_type" />
+    <NavigationProperty Name="Product_type" Relationship="Self.FK_Products_Product_type" FromRole="Products" ToRole="Product_type" />
+    <NavigationProperty Name="Product_workshops" Relationship="Self.FK_Product_workshops_Products" FromRole="Products" ToRole="Product_workshops" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Type_workshop">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="type_workshop1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Workshops" Relationship="Self.FK_Workshops_Type_workshop" FromRole="Type_workshop" ToRole="Workshops" />
+  </EntityType>
+  <EntityType Name="Workshops">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_workshop" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="type_workshop" Type="Int32" Nullable="false" />
+    <Property Name="count_people" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Product_workshops" Relationship="Self.FK_Product_workshops_Workshops" FromRole="Workshops" ToRole="Product_workshops" />
+    <NavigationProperty Name="Type_workshop1" Relationship="Self.FK_Workshops_Type_workshop" FromRole="Workshops" ToRole="Type_workshop" />
+  </EntityType>
+  <Association Name="FK_Products_Material_type">
+    <End Role="Material_type" Type="Self.Material_type" Multiplicity="1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Material_type">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="base_material_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Product_type">
+    <End Role="Product_type" Type="Self.Product_type" Multiplicity="1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product_type">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="type_products_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_workshops_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="Product_workshops" Type="Self.Product_workshops" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Product_workshops">
+        <PropertyRef Name="id_product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_workshops_Workshops">
+    <End Role="Workshops" Type="Self.Workshops" Multiplicity="1" />
+    <End Role="Product_workshops" Type="Self.Product_workshops" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workshops">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Product_workshops">
+        <PropertyRef Name="id_workshop" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Workshops_Type_workshop">
+    <End Role="Type_workshop" Type="Self.Type_workshop" Multiplicity="1" />
+    <End Role="Workshops" Type="Self.Workshops" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Type_workshop">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Workshops">
+        <PropertyRef Name="type_workshop" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="demoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Material_type" EntityType="Self.Material_type" />
+    <EntitySet Name="Product_type" EntityType="Self.Product_type" />
+    <EntitySet Name="Product_workshops" EntityType="Self.Product_workshops" />
+    <EntitySet Name="Products" EntityType="Self.Products" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Type_workshop" EntityType="Self.Type_workshop" />
+    <EntitySet Name="Workshops" EntityType="Self.Workshops" />
+    <AssociationSet Name="FK_Products_Material_type" Association="Self.FK_Products_Material_type">
+      <End Role="Material_type" EntitySet="Material_type" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Product_type" Association="Self.FK_Products_Product_type">
+      <End Role="Product_type" EntitySet="Product_type" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_workshops_Products" Association="Self.FK_Product_workshops_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Product_workshops" EntitySet="Product_workshops" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_workshops_Workshops" Association="Self.FK_Product_workshops_Workshops">
+      <End Role="Workshops" EntitySet="Workshops" />
+      <End Role="Product_workshops" EntitySet="Product_workshops" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Workshops_Type_workshop" Association="Self.FK_Workshops_Type_workshop">
+      <End Role="Type_workshop" EntitySet="Type_workshop" />
+      <End Role="Workshops" EntitySet="Workshops" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

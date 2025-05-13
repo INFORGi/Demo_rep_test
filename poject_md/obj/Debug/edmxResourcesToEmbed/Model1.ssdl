@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище demo_treModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Material_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name_material_type" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="procient" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name_product_type" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="cooficient_product" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product_workshops">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_product" Type="int" Nullable="false" />
+    <Property Name="id_workshop" Type="int" Nullable="false" />
+    <Property Name="time(m)" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="type_products_id" Type="int" Nullable="false" />
+    <Property Name="name_product" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="articul" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="min_cost_seller" Type="float" Nullable="false" />
+    <Property Name="base_material_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Type_workshop">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="type_workshop" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Workshops">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name_workshop" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="type_workshop" Type="int" Nullable="false" />
+    <Property Name="count_people" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Product_workshops_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="Product_workshops" Type="Self.Product_workshops" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Product_workshops">
+        <PropertyRef Name="id_product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_workshops_Workshops">
+    <End Role="Workshops" Type="Self.Workshops" Multiplicity="1" />
+    <End Role="Product_workshops" Type="Self.Product_workshops" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workshops">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Product_workshops">
+        <PropertyRef Name="id_workshop" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Material_type">
+    <End Role="Material_type" Type="Self.Material_type" Multiplicity="1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Material_type">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="base_material_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Product_type">
+    <End Role="Product_type" Type="Self.Product_type" Multiplicity="1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product_type">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="type_products_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Workshops_Type_workshop">
+    <End Role="Type_workshop" Type="Self.Type_workshop" Multiplicity="1" />
+    <End Role="Workshops" Type="Self.Workshops" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Type_workshop">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Workshops">
+        <PropertyRef Name="type_workshop" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище demo_treModelContainer">
+    <EntitySet Name="Material_type" EntityType="Self.Material_type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product_type" EntityType="Self.Product_type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product_workshops" EntityType="Self.Product_workshops" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Type_workshop" EntityType="Self.Type_workshop" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Workshops" EntityType="Self.Workshops" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Product_workshops_Products" Association="Self.FK_Product_workshops_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Product_workshops" EntitySet="Product_workshops" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_workshops_Workshops" Association="Self.FK_Product_workshops_Workshops">
+      <End Role="Workshops" EntitySet="Workshops" />
+      <End Role="Product_workshops" EntitySet="Product_workshops" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Material_type" Association="Self.FK_Products_Material_type">
+      <End Role="Material_type" EntitySet="Material_type" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Product_type" Association="Self.FK_Products_Product_type">
+      <End Role="Product_type" EntitySet="Product_type" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Workshops_Type_workshop" Association="Self.FK_Workshops_Type_workshop">
+      <End Role="Type_workshop" EntitySet="Type_workshop" />
+      <End Role="Workshops" EntitySet="Workshops" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
